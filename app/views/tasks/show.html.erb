@@ -1,0 +1,9 @@
+<h1> <%= @task.completed ? '☑️' : '🔲' %>  <%= @task.title %> </h1>
+<h2> <%=  @task.details %></h2>
+
+
+<div class="nav_block">
+  <%= link_to 'Edit', edit_task_path(@task)  %>
+  <%= link_to 'Destroy', destroy_path(@task), method: :delete, data: { confirm: "Are you sure?" } %>
+  <%= link_to 'Back to list',  tasks_path %>
+</div>
